@@ -1,0 +1,25 @@
+.footer {
+    background-color: rgb(3, 35, 54);
+    color: #ffffff;
+    height: 10vh;
+    width: 100%;
+    font-family: 'Quicksand', sans-serif;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer-content {
+    text-align: center;
+  }
+  
+  .footer h3 {
+    font-size: 2vh;
+    margin-bottom: 0.5vh;
+  }
+  
+  .footer p {
+    font-size: 1.5vh;
+    margin-top: 0.5vh;
+  }

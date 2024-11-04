@@ -1,0 +1,944 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Quicksand", sans-serif;
+    box-sizing: border-box;
+    
+
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+
+main{
+    background: linear-gradient(180deg, rgba(255,255,255,0.9920343137254902) 1%, rgba(255,144,64,1) 25%, rgba(255,125,0,1) 41%, rgba(255,89,0,1) 75%, rgba(255,38,0,1) 81%);
+}
+
+header{
+    width: 100%;
+    height: 110vh;
+    background: linear-gradient(rgba(1, 111, 255, 0.274),rgba(88, 154, 241, 0.445)) , url(imagenes/montañas1.png);
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+nav {
+    box-sizing: border-box;
+    width: 100vw;
+    background-color: rgba(31, 77, 177, 0.904);
+    height: 20vh;
+    line-height: 5vh;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    transition: height 0.3s ease, line-height 0.3s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+
+nav.shrink {
+    height: 10vh;
+    line-height: 2.5vh;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.8vh;
+    padding: 5px 7px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: rgba(18, 52, 124, 0.904);
+}
+
+.logo {
+    font-size: 4vh;
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 700;
+    color: #fff;
+    float: left;
+    text-decoration: none;
+}
+
+nav ul {
+    float: right;
+}
+
+nav ul li {
+    float: left;
+    list-style: none;
+    position: relative;
+}
+
+nav ul li ul {
+    position: absolute;
+    display: none;
+    background-color: rgba(31, 77, 177, 0.904);
+    border-radius: 0px 0px 5px 5px;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    line-height: 1;
+    width: 100px;
+    border-radius: 5px;
+    padding: 6px;
+}
+
+nav ul li ul li a {
+    padding: 5px 10px;
+}
+
+nav ul li ul li a:hover {
+    background-color: rgba(18, 52, 124, 0.904);
+}
+
+.register {
+    background-color: #fd7200;
+    font-weight: 600;
+}
+
+.register:hover {
+    background-color: #e65c01;
+}
+
+
+
+.bienvenida{
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
+    width: 100%;
+    justify-content: center;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+}
+
+.bienvenida.active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+h1{
+    font-family: "Amatic SC", sans-serif;
+    font-size: 7vh;
+    padding: 20px;
+}
+
+.bienvenida p {
+    font-size: 2vh;
+    letter-spacing: 2px;
+    margin: 10px 0px;
+    padding: 10px;
+}
+
+.bienvenida a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2vh;
+    padding: 10px 10px;
+    background-color: #fd7200;
+    font-weight: 600;
+}
+
+
+.bienvenida a:hover {
+    background-color: #e65c01;
+}
+
+
+#About{
+    width: 100%;
+    height: 80vh;
+    
+
+}
+
+.container-about {
+    display: flex;
+    padding: 2%;
+    margin-top: 30px;
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+    overflow: hidden;
+}
+
+.about.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+.about h2{
+    font-family: "Amatic SC", sans-serif;
+    font-size: 4vh;
+    font-weight: 800;
+    padding: 15px;
+
+
+}
+
+
+
+.about p{
+    width: 100%;
+    letter-spacing: 1px;
+    font-size: 2vh;
+    padding: 3%;
+
+}
+
+
+
+
+
+.imagen-about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+.img-about-1{
+    width: 35vw;
+    margin-left: 22%;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+    overflow: hidden;
+  }
+
+.img-about-2 {
+    width: 35vw;
+    margin-left: 3%;
+    margin-top: -30%;
+    border: #ffffff solid 3px;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+  }
+
+  .img-about-1.active, .img-about-2.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+
+
+
+.button-container-mira {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 3%;
+}
+
+
+.boton-mira  {
+    text-decoration: none;
+    font-size: 2vh;
+    font-weight: 600;
+    color: #ffffff;
+    background: rgba(31, 77, 177, 0.904);
+    padding: 10px 15px;
+    
+}
+
+.boton-mira:hover{
+    background: rgba(22, 55, 128, 0.904);
+}
+
+
+
+#Galery{
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.titulo-cabañas{
+    display: flex;
+    flex-direction: row-reverse;
+    font-family: "Amatic SC", sans-serif;
+    font-size: 4vh;
+    color: #000000;
+    font-weight: 800;
+    padding: 10px;
+    margin-right: 30px;
+    margin-top: 70px;
+}
+
+.container-galery{
+    display: flex;
+    padding: 5% 5%;
+    margin-bottom: 5%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+.card{
+    position: relative;
+    width: 250px;
+    height: 300px;
+    margin-top: 2%;
+    margin-bottom: 3%;
+    max-width: 300px;
+    max-height: 400px;
+}
+
+.card .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.card .front{
+    transform: perspective(300px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+
+
+}
+
+.card .front img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .front h3{
+    position: absolute;
+    font-size: 3vh;
+    bottom: 0;
+    width: 100%;
+    height: 75px;
+    line-height: 75px;
+    color: #ffffff;
+    background: rgba(0, 0, 0, .4);
+    text-align: center;
+
+
+}
+
+.card .back {
+    transform: perspective(300px) rotateY(180deg);
+    background: rgb(3,35,54);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .back .link{
+    border-top:  solid 1px #ffffff;
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+
+
+}
+
+.card .back .link a{
+    text-decoration: none;
+    position: absolute;
+    padding: 10px;
+    font-size: 2.5vh;
+    color: #ffffff;
+    background: #ff7b00;
+
+    
+
+
+}
+
+.card .back .link a:hover{
+    background: #ff5e00;
+}
+
+.card .back h3{
+    font-size: 3vh;
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
+
+.card .back p{
+    font-size: 2.5vh;
+    padding: 3%;
+}
+
+.card:hover .front{
+    transform: perspective(300px) rotateY(180deg);
+}
+
+.card:hover .back{
+    transform: perspective(300px) rotateY(360deg);
+} 
+
+
+#FAQ{
+    width: 100vw;
+    height: 110vh;
+    background-color: #ffffff;
+    
+}
+
+#FAQ h2 {
+    font-family: "Amatic SC", sans-serif; 
+    font-size: 4vh;
+    font-weight: 800;
+    padding: 20px 0;
+    margin: 0 5%;
+
+}
+
+.acordeonfaq {
+    background: #ffffff;
+    transform: scale(0);
+    opacity: 0;
+    transition: transform 0.4s ease-in-out, opacity 0.8s ease-in-out;
+}
+
+.acordeonfaq.active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.acordeonfaq:nth-child(2) {
+    transition-delay: 0.6s;
+}
+
+.acordeonfaq:nth-child(3) {
+    transition-delay: 0.8s;
+}
+
+.acordeonfaq:nth-child(4) {
+    transition-delay: 1s;
+}
+
+.acordeonfaq:nth-child(5) {
+    transition-delay: 1.2s;
+}
+
+.acordeonfaq:nth-child(6) {
+    transition-delay: 1.4s;
+}
+
+.acordeonfaq label{
+    display: block;
+    padding: 2%;
+    font-size: 2vh;
+    background: rgb(3,35,54);
+    color: white;
+    cursor: pointer;
+    margin-bottom: 2%;
+    margin-right: 3%;
+    margin-left: 3% ;
+    transition: all 300ms ease;
+
+}
+
+.acordeonfaq label:hover{
+    background: #ff7b00;
+}
+
+.acordeonfaq .contenido-acordeon{
+    max-height: 0px;
+    font-size: 2vh;
+    overflow: hidden;
+    transition: all 300ms ease;
+
+}
+
+.faq-acordeon:checked ~ .contenido-acordeon{
+    max-height: 350px;
+    padding: 2% 3%;
+    margin: 2% 3% 2% 4%;
+}
+
+.faq-acordeon{
+    display: none;
+}
+
+#Contact{
+    width: 100%;
+    height: 250vh;
+    background: linear-gradient(rgba(1, 111, 255, 0.274),rgba(88, 154, 241, 0.445)) , url(imagenes/montañas4.png), no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: center;
+}
+
+#Contact h2{
+    font-family: "Amatic SC", sans-serif; 
+    font-size: 4vh;
+    font-weight: 800;
+    margin-top: 5%;
+    padding: 10px;
+
+    
+}
+
+.contact-form{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form{
+
+    transform: translate(-50%);
+    opacity: 0;
+    transition: transform 0.4s ease-in-out, opacity 0.8s ease-in-out;
+    overflow: hidden;
+}
+
+.form.active {
+    transform: translate(0);
+    opacity: 1;
+} 
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    margin-top: 3%;
+    margin-bottom: 5%;
+    font-size: 2vh;
+
+}
+
+
+form label{
+    margin-bottom: 1%;
+
+}
+
+form input, form textarea {
+    margin-bottom:  16px;
+    margin-right: 5%;
+    font-size: 2vh;
+    padding: 2%;
+    border: 1px solid rgb(3,35,54) ;
+    border-radius: 10px;
+    width: 100%;
+}
+
+form button{
+    padding: 4% 6%;
+    border: solid #ffffff 1px;
+    background-color: rgb(3,35,54) ;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px 15px;
+    font-size: 2vh;
+}
+
+form button:hover{
+    background-color:rgb(0, 26, 41);
+}
+
+.button-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+
+}
+
+.button-delete{
+    background-color: rgb(173, 22, 22)
+    ;
+}
+
+.button-delete:hover{
+    background-color: rgb(118, 13, 13) ;
+
+}
+
+.map-container {
+    width: 90%;
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.map{
+    width: 100%;
+    max-width: 450px;
+    transform: scale(0.2);
+    opacity: 0;
+    transition: transform 0.4s ease-in-out, opacity 0.8s ease-in-out;
+    overflow: hidden;
+}
+    
+.map.active {
+    transform: scale(1);
+    opacity: 1;
+} 
+
+
+.container-tarjetas-contacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    margin-top: 10px;
+    text-align: left;
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.3vh;
+    color: #ffffff;
+    margin-top: 2vh;
+    max-width: 200px;
+}
+
+.tarjetas{
+    width: 100%;
+    padding: 10px;
+    margin: 3%;
+    background-color: #6d67679a;
+    display: flex;
+    align-items: center;
+    transform: translateY(50%);
+    opacity: 0;
+    transition: transform 0.4s ease-in-out, opacity 0.8s ease-in-out;
+}
+
+.tarjetas.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.tarjetas:nth-child(2) {
+    transition-delay: 0.6s;
+}
+
+.tarjetas:nth-child(3) {
+    transition-delay: 0.8s;
+}
+
+.tarjetas:nth-child(4) {
+    transition-delay: 1s;
+}
+
+
+.tarjetas h4 {
+    font-size: 2vh;
+}
+
+.tarjetas p{
+    font-size: 2vh;
+}
+
+
+.contactIcon{
+    font-size: 3vh;
+    margin-right: 20px;
+
+}
+
+
+.footer{
+
+    font-size: 2vh;
+    background-color: rgb(3, 35, 54);
+    color: #ffffff;
+    height: 10vh;
+    width: 100vw;
+    font-family: "Quicksand", sans-serif;
+    letter-spacing: 1px;
+
+}
+
+
+
+
+@media (min-width:425px) {
+
+
+    nav {
+
+        height: 18vh;
+        justify-content: space-around;
+
+    }
+}
+
+@media (min-width:580px) {
+    
+    .logo {
+        font-size: 5vh;
+    
+    }
+    
+    nav ul li a{
+        font-size: 2vh;
+
+    }
+
+    h1{
+        font-size: 8vh;
+    }
+
+    .about h2{
+        font-size: 5vh;
+        padding: 18px;
+    
+    } 
+
+    .about p{
+        font-size: 2.3vh;
+    
+    }
+
+    .img-about-1{
+        width: 25vw;
+        margin-left: 30%;
+    
+    }
+    
+    .img-about-2 {
+        width: 25vw;
+        margin-left: 6%;
+
+        
+    }
+
+    .titulo-cabañas {
+        font-size: 5vh;
+
+    }
+
+
+    #FAQ h2 {
+
+        font-size: 5vh;
+
+    }
+    #Contact h2 {
+        font-size: 5vh;
+
+    }
+
+    form {
+        font-size: 2.3vh;
+    }
+
+    form input, form textarea {
+        font-size: 2.3vh;
+
+    }
+
+    form button {
+        padding: 3% 5%;
+        font-size: 2.3vh;
+    }
+
+    .container-tarjetas-contacto {
+        flex-direction: row;
+        width: 100%;
+        font-size: 1.6vh;
+    }
+
+}
+
+@media (min-width:600px) {
+
+    #Contact{
+        height: 150vh;
+    }
+
+    .contact-form{
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .map-container {
+        width: 90%;
+        margin: 0 20px;
+        display: flex;
+        justify-content: center;
+        height: 80%;
+        margin-bottom: 80px;
+    }
+    
+    .map{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (min-width:650px) {
+    .tarjetas h4 {
+        font-size: 2.5vh;
+    }
+    
+    .tarjetas p{
+        font-size: 2.5vh;
+        
+    }
+
+    .tarjetas{
+        padding: 10px 20px;
+    }
+    
+    
+    .contactIcon{
+        font-size: 3.5vh;
+        margin-right: 20px;
+    
+    }
+
+
+    
+}
+
+@media (min-width:768px) {
+    .img-about-1 {
+        width: 20vw;
+        margin-left: 40%;
+    }
+
+    .img-about-2 {
+        width: 20vw;
+        margin-left: 10%;
+    }
+
+    .acordeonfaq label {
+        font-size: 2.3vh;
+    }
+
+    .acordeonfaq .contenido-acordeon{
+        font-size: 2.3vh;
+    
+    }
+
+    .faq-acordeon:checked ~ .contenido-acordeon{
+        max-height: 350px;
+        padding: 1% 2%;
+        margin: 1% 2% 1% 3%;
+    }
+
+
+    
+}
+
+@media (min-width:800px) {
+    nav {
+        height: 16vh;
+    }
+
+    .logo {
+        font-size: 5.5vh;
+    }
+
+    nav ul li a {
+        font-size: 2.5vh;
+    }
+
+    h1 {
+        font-size: 9vh;
+    }
+
+    .bienvenida p {
+        font-size: 2.5vh;
+    }
+
+    .bienvenida a {
+        font-size: 2.5vh;
+    }
+
+    .about h2 {
+        font-size: 5.5vh;
+        padding: 14px;
+    }
+
+    .about p {
+        font-size: 2.5vh;
+    }
+
+    .about p {
+        font-size: 2.5vh;
+    }
+
+    .titulo-cabañas {
+        font-size: 5.5vh;
+    }
+
+
+}
+
+@media (min-width:860px) {
+    .card {
+        position: relative;
+        width: 280px;
+        height: 350px;
+    }
+
+    .container-galery {
+        display: flex;
+        padding: 5% 2%
+    }
+
+    .titulo-cabañas {
+        margin-top: 20%;
+    }
+}
+
+@media (min-width:930px) {
+    form {
+        margin: 2% 0 2% 5% ;
+
+    }
+
+    .button-container{
+        margin-right: 7%;
+    }
+    
+}
+
+
+  

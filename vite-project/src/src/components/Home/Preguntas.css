@@ -1,0 +1,83 @@
+#FAQ{
+    width: 100vw;
+    height: 115vh;
+    background-color: #ffffff;
+    
+}
+
+#FAQ h2 {
+    font-family: "Amatic SC", sans-serif; 
+    font-size: 6vh;
+    font-weight: 800;
+    padding: 20px 0;
+    margin: 0 5%;
+
+}
+
+.acordeonfaq {
+    background: #ffffff;
+    transform: scale(0);
+    opacity: 0;
+    transition: transform 0.4s ease-in-out, opacity 0.8s ease-in-out;
+}
+
+.acordeonfaq.active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.acordeonfaq:nth-child(2) {
+    transition-delay: 0.6s;
+}
+
+.acordeonfaq:nth-child(3) {
+    transition-delay: 0.8s;
+}
+
+.acordeonfaq:nth-child(4) {
+    transition-delay: 1s;
+}
+
+.acordeonfaq:nth-child(5) {
+    transition-delay: 1.2s;
+}
+
+.acordeonfaq:nth-child(6) {
+    transition-delay: 1.4s;
+}
+
+.acordeonfaq label{
+    display: block;
+    padding: 1.5%;
+    font-size: 2.5vh;
+    background: rgb(3,35,54);
+    color: white;
+    cursor: pointer;
+    margin-bottom: 2%;
+    margin-right: 3%;
+    margin-left: 3% ;
+    transition: all 300ms ease;
+
+}
+
+.acordeonfaq label:hover{
+    background: #ff7b00;
+}
+
+.acordeonfaq .contenido-acordeon{
+    max-height: 0px;
+    font-size: 2.5vh;
+    overflow: hidden;
+    transition: all 300ms ease;
+
+}
+
+.faq-acordeon:checked ~ .contenido-acordeon{
+    max-height: 350px;
+    padding: 0% 2%;
+    margin: 1% 2% 1% 3%;
+}
+
+.faq-acordeon{
+    display: none;
+}

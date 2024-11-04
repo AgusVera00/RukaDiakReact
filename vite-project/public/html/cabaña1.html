@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style1.css">
+        <script src="https://kit.fontawesome.com/3f3dc876ef.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Inter:wght@100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        <title>Cabaña 1</title>
+    </head>
+<body>
+
+    <header>
+        <nav id="Home">
+                <a href="index.html" class="logo">RUKA DIAK</a>
+                <ul>
+                    <li><a href="#About"><i class="fa-solid fa-heart" style="color: #ffffff;"></i> Sobre</a></li>
+                    <li><a href=""><i class="fa-solid fa-images" style="color: #ffffff;"></i> Galeria</a>
+                        <ul class="dropdown">
+                            <li><a href="cabaña1.html">Cabaña 1</a></li>
+                            <li><a href="cabaña2.html">Cabaña 2</a></li>
+                            <li><a href="cabaña3.html">Cabaña 3</a></li>
+                            <li><a href="cabaña4.html">Cabaña 4</a></li>
+                        </ul>
+                    </li>     
+                    <li><a href="#FAQ"><i class="fa-solid fa-circle-question" style="color: #ffffff;"></i> FaQ</a></li>
+                    <li><a href="#Contact"><i class="fa-solid fa-envelope" style="color: #ffffff;"></i> Contacto</a></li>
+                    <li><a href="#" class="register"><i class="fa-solid fa-user" style="color: #ffffff;"></i> Registrar</a></li>
+                </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="cuerpo-cabaña">
+        <section class="container-carac">
+            
+                <h1 class="titulo-cabaña">Cabaña 1</h1>
+                <p class="texto-cabaña">Consta de lo siguiente:</p>
+                <br>
+                <ul class="caracteristicas">
+                    <li><i class="fa-solid fa-circle-check" style="color: #134190;"></i> Capacidad de 6 a 8 personas, o dos familias</li>
+                    <li><i class="fa-solid fa-circle-check" style="color: #134190;"></i> Comedor</li>
+                    <li><i class="fa-solid fa-circle-check" style="color: #134190;"></i> Living</li>
+                    <li><i class="fa-solid fa-circle-check" style="color: #134190;"></i> Cocina</li>
+                    <li><i class="fa-solid fa-circle-check" style="color: #134190;"></i> Baño planta baja</li>
+                    <li><i class="fa-solid fa-circle-check" style="color: #134190;"></i> Habitacion con 4 camas de 1 plaza</li>
+                    <li><i class="fa-solid fa-circle-check" style="color: #134190;"></i> Habitacion principal con baño en suite</li>
+                    <li><i class="fa-solid fa-circle-check" style="color: #134190;"></i> Parrila</li>
+                    <li><i class="fa-solid fa-circle-check" style="color: #134190;"></i> Mesas y sillas de exterior</li>
+                    <li><i class="fa-solid fa-circle-check" style="color: rgb(19, 65, 144);"></i> Calefaccion a leña</li>
+                </ul>
+            </section>
+        <section class="container-slider">
+        <div class="galeria">
+            <div class="slider">
+                <div class="sliderInner">
+                    <img class="imagen" src="imagenes/interior-cabaña1.jpg" alt="living">
+                    <img class="imagen" src="imagenes/interior-cabaña2.jpg" alt="cocina">
+                    <img class="imagen" src="imagenes/interior-cabaña3.jpg" alt="comedor">
+                    <img class="imagen" src="imagenes/interior-cabaña4.jpg" alt="habitacion">
+                </div>
+            </div>
+        </div>
+        </section>
+
+    </div>
+    <div class="calen-reserv">
+        <section class="container-calendario">
+            <h3 class="titulo-reserva">Selecciona las fechas y reserva:</h3>
+            
+            <div class="calendar">
+                <div class="calendar-header">
+                    <button id="prevBtn" class="calendar-btn"><i class="fa-solid fa-angle-left"></i></button>
+                    <h2 id="currentMonth"></h2>
+                    <button id="nextBtn" class="calendar-btn"><i class="fa-solid fa-angle-right"></i></button>
+                </div>
+                <div id="calendarBody" class="calendar-body">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="container-reserva">
+            <h3 class="titulo-reserva">Reserva ahora:</h3>
+            <form class="reservar">
+            <label for="text" >Nombre y Apellido</label>
+            <input type="text" name= "nombre" placeholder="Nombre y Apellido">
+            <label for="tel" >Telefono</label>
+            <input type="tel" name="telefono" placeholde="Telefono">
+            <label for="date" >Fechas seleccionadas</label>
+            <input type="text" id="selectedDates" placeholder="Fechas seleccionadas" readonly>
+            <label for="">Mensaje:</label>
+            <textarea name="mensaje" placeholder="Tu mensaje"></textarea>
+            <div class="button-container">                
+                <button type="submit">Enviar</button>
+                <button class="button-delete" type="reset">Borrar</button>
+            </div>
+            </form>
+
+
+
+        </section>
+
+    </div>
+
+    <section class="compartir">
+        <div class="container-compartir">
+        <h2 class="titulo-compartir">Compartinos tu experiencia!</h2>
+        <p>En este aparado te invitamos a que nos cuentes como fue tu experiencia!<br>
+            No es necesario que sea solo de nuestro complejo de cabañas o que tenga relacion a ellas,
+            puede ser de tus vacaciones en Moquehue o Villa Pehuenia o cualquier parte del sur!<br>
+            Tenes la opcion si lo deseas de calificar nuestras cabañas con 5 estrellas!<br>
+            Esperamos que hayas podido descansar y disfrutar de tus vacaciones y que te lleves hermosos recuerdos<br>
+        </p>
+        <form id="formEx">
+            <label for="nombre-apellido">Nombre y Apellido</label>
+            <input type="text" id="nombre-apellido" name="nombre-apellido" required/>
+        
+            <label for="descripcion">Contanos tu experiencia:</label>
+            <textarea name="descripcion" id="descripcion" required>Escribí acá:</textarea>
+            
+            <label>Puntuación:</label>
+            <div class="star-rating">
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="5">&#9733;</span>
+            </div>
+            <input type="hidden" id="rating-value" name="rating-value" value="0" > <!-- Hidden input to store the rating -->
+        
+            <label for="foto-ex">Ingresa tu foto:</label>
+            <input type="url" name="foto-ex" id="foto-ex" placeholder="https://picsum.photos/200" required>
+            <label for="card-bg-color">Color de fondo:</label>
+            <input type="color" id="card-bg-color" name="card-bg-color" value="#ffffff" class="color">
+            <label for="card-border-color">Color del borde:</label>
+            <input type="color" name="card-border-color" id="card-border-color" value="#000000" class="color">
+        
+            <div class="button-container">                
+                <button type="submit">Enviar</button>
+                <button class="button-delete" type="reset">Borrar</button>
+            </div>
+        </form>    
+
+        </div>
+        <div class="container-tarjetas">
+
+            <div id="cardContainer">
+
+            </div>
+        </div>
+        
+
+    </section>
+
+
+        <section id="Contact">
+            <h2>Contacto </h2>
+            <div class="contact-form">
+            <form class="form">
+                <label for="text">Nombre:</label>
+                <input type="text" name="nombre" placeholder="Nombre y Apellido">
+
+                <label>Email:</label>
+                <input type="email" name="email" placeholder="Email">
+
+                <label>Celular:</label>
+                <input type="tel" name="telefono" placeholder="Celular">
+
+                <label>Mensaje:</label>
+                <textarea name="mensaje" placeholder="Tu mensaje"></textarea>
+
+                <div class="button-container">                
+                    <button type="submit">Enviar</button>
+                    <button class="button-delete" type="reset">Borrar</button>
+                </div>
+            </form>
+                <div class="map-container">
+                
+                        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3104.4642745272427!2d-71.30212922406243!3d-38.913364571720656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96131b700b3154a5%3A0x55ea8cb724fd35fc!2sRUKA%20DIAK!5e0!3m2!1ses-419!2sar!4v1723433130219!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+                </div>
+            </div>   
+            <div class="container-tarjetas-contacto">
+                <div class="tarjetas" >
+                    <i class="fa-brands fa-instagram contactIcon" ></i>
+                    <article class="texto">
+                        <h4 class="sub-titulo">Instagram</h4>
+                        <p class="descripcion">@RUKADIAK</p>
+                    </article>
+                </div>
+                <div class="tarjetas" >
+                    <i class="fa-brands fa-facebook contactIcon"></i>
+                    <article class="texto">
+                        <h4 class="sub-titulo">Facebook</h4>
+                        <p class="descripcion">@CabañasCostaAlLago</p>
+                    </article>
+                </div>
+                <div class="tarjetas" >
+                    <i class="fa-brands fa-whatsapp contactIcon"></i>
+                    <article class="texto">
+                        <h4 class="sub-titulo">WhatsApp</h4>
+                        <p class="descripcion">+54 9 1123456789</p>
+                        <p class="descripcion">+54 9 1123456789</p>
+                    </article>
+                </div>
+
+            </div>
+            
+        </section>
+    </main>
+    <footer>
+
+                
+        <div class="footer">
+            <h3>Creado por AgusVera</h3>
+            <p>rukadiak@gmail.com</p>
+        </div>
+
+
+    </footer>
+
+    <script src="scrip-cabaña1.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Inter:wght@100..900&family=Quicksand:wght@300..700&display=swap");
+@import url("https://kit.fontawesome.com/3f3dc876ef.js");
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Quicksand", sans-serif;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+
+main{
+    background: linear-gradient(180deg, rgba(255,255,255,0.9920343137254902) 1%, rgba(255,144,64,1) 25%, rgba(255,125,0,1) 41%, rgba(255,89,0,1) 75%, rgba(255,38,0,1) 81%);
+}
+
+
+
+
+header{
+    width: 100vw;
+    height: 110vh;
+    background: linear-gradient(rgba(1, 111, 255, 0.274),rgba(88, 154, 241, 0.445)) , url(../../imagenes/montañas1.png);
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+nav {
+    box-sizing: border-box;
+    width: 100vw;
+    background-color: rgb(31, 77, 177);
+    height: 15vh;
+    line-height: 5vh;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    transition: height 0.3s ease, line-height 0.3s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+
+nav.shrink {
+    height: 10vh;
+    line-height: 2.5vh;
+    background-color: rgba(31, 77, 177, 0.87);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2.5vh;
+    padding: 5px 11px;
+    display: block;
+    
+}
+
+nav ul li a:hover {
+    background-color: rgba(18, 52, 124, 0.904);
+}
+
+.logo {
+    font-size: 6vh;
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 600;
+    color: #fff;
+    float: left;
+    text-decoration: none;
+    line-height: 10vh;
+}
+
+nav ul {
+    float: right;
+}
+
+nav ul li {
+    float: left;
+    list-style: none;
+    position: relative;
+}
+
+nav ul li ul {
+    position: absolute;
+    display: none;
+    background-color: rgba(31, 77, 177, 0.904);
+    border-radius: 0px 0px 5px 5px;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    line-height: 1;
+    width: 100px;
+    border-radius: 5px;
+    padding: 6px;
+}
+
+nav ul li ul li a {
+    padding: 5px 10px;
+}
+
+nav ul li ul li a:hover {
+    background-color: rgba(18, 52, 124, 0.904);
+}
+
+.register {
+    background-color: #fd7200;
+    font-weight: 600;
+}
+
+.register:hover {
+    background-color: #e65c01;
+}
+
+
+
+.bienvenida{
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 6.5%;
+    height: 80vh;
+    width: 100%;
+    justify-content: center;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+}
+
+.bienvenida.active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+h1{
+    font-family: "Amatic SC", sans-serif;
+    font-size: 11vh;
+    padding: 20px;
+}
+
+.bienvenida p {
+    font-size: 3vh;
+    letter-spacing: 2px;
+    margin: 10px 0px;
+    padding: 10px;
+}
+
+.bienvenida a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2.8vh;
+    padding: 10px 10px;
+    background-color: #fd7200;
+    font-weight: 600;
+}
+
+
+.bienvenida a:hover {
+    background-color: #e65c01;
+}

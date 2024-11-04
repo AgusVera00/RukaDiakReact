@@ -1,0 +1,92 @@
+.cuerpo-cabaña{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.container-carac{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    width: 50%;
+    height: 70vh;
+    transform: translate(100%);
+    opacity: 0;
+    transition: transform 0.4s ease-in-out, opacity 0.8s ease-in-out;
+}
+
+.container-carac.active {
+    transform: translate(0);
+    opacity: 1;
+}
+
+.titulo-cabaña {
+    font-size: 5vh;
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 900;
+    margin-bottom: 5%;
+    margin-left: 7%;
+}
+
+.texto-cabaña{
+    font-size: 2vh;
+    text-align: left;
+    font-weight: 600;
+    margin-left: 7%;
+}
+
+.caracteristicas{
+    font-size: 1.8vh;
+    list-style: none;
+    text-align: left;
+    letter-spacing: 2px;
+    margin-bottom: 3%;
+    margin-left: 6%;
+}
+
+.caracteristicas li{
+    margin: 10px;
+}
+
+.container-slider{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    transition: opacity 1s ease;
+    height: 40vh;
+    margin-top: 40px;
+
+}
+
+.galeria{
+    max-height: 40vh;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+.slider{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    overflow: hidden;
+    max-width: 333px;
+    max-height: 450px;
+}
+
+.sliderInner{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    transition: transform 1s ease-in-out;
+    width: 100%;
+}
+
+.imagen{
+    width: 110%;
+    height: 100%;
+    max-height: 450px;
+    max-width: 333px;
+
+}
